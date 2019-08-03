@@ -10,20 +10,19 @@ public class UniqueEmail {
         int n=countEmail(arr);
         System.out.println("Number of unique emails is= "+n);
     }
-    public static int countEmail(String[] arr) {
-        HashSet<String> count=new HashSet<>();
-        for(String email:arr){
-            String firstPart=email.substring(0,email.indexOf('@'));
-            String secondPart=email.substring(email.indexOf('@'));
+    public static int countEmail(String arr[]){
+        Set<String> count=new HashSet<>();
+        for(String iterator:arr) {
+            int index=iterator.indexOf('@');
+            String firstPart=iterator.substring(0,index);
+            String secondPart=iterator.substring(index);
             if(firstPart.contains("+")){
-                firstPart=firstPart.substring(0,firstPart.indexOf("+"));
+                int plusIndex=firstPart.indexOf('+');
+                firstPart=firstPart.substring(0,plusIndex);
             }
-            if(firstPart.contains(".")){
-                firstPart=firstPart.replaceAll(".","");
-            }
+            firstPart.replaceAll(".","");
             count.add(firstPart+secondPart);
         }
         return count.size();
     }
 }
-
