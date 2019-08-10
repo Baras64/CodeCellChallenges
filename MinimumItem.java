@@ -1,6 +1,7 @@
 public class MinimumItem{
     public static void main(String args[]){
         System.out.println(countItem(10)*countItem(256)*countItem(511)*countItem(4097)*countItem(8194));
+        //System.out.println(countItem(8194));
     }
 
     public static int countItem(int amount)
@@ -17,7 +18,7 @@ public class MinimumItem{
         int k=0;
         for (int i = 0; i < 12; i++) {
             if (items[i] != 0) {
-               k++;
+                k+=items[i];
             }
         }
         return k;
