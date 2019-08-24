@@ -1,8 +1,6 @@
 import java.util.Arrays;
-public class AmazonIsBurning
-{
-    static int computeMode(int a[], int n)
-    {
+public class AmazonIsBurning{
+    static int computeMode(int a[], int n){
         int[] b = new int[n];
         int max = Arrays.stream(a).max().getAsInt();
         int t = max + 1;
@@ -173,12 +171,9 @@ public class AmazonIsBurning
                 19, 10, 13, 19, 18, 6, 18, 8, 16, 13, 4, 18, 14, 6, 17, 5, 20, 9, 12, 5, 8, 15,
                 19, 1, 2, 19, 1, 14, 15, 14, 14, 10, 10, 14, 8, 2, 5, 1, 1, 9, 18, 13, 11, 5, 15,
                 17, 20, 3, 14, 4, 10, 20, 8, 1, 20, 7, 20, 4, 16, 14, 1, 5, 12, 17, 5, 3, 5, 8, 3};
-
         int case4=computeMode(d,d.length);
-
+        
         System.out.println(case1*case2*case3*case4);
-
-
     }
 } 
   
